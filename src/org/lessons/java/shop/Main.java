@@ -7,24 +7,22 @@ public class Main {
 		//Creo la variabile assegnandogli il tipo di classe
 		Prodotto prodottoUno = new Prodotto();
 		
-		//Assegno gli attributi al prodotto uno
-		prodottoUno.nomeProdotto = "iPhone 15";
-		prodottoUno.descrizioneProdotto = "Nuovo iPhone con Intelligenza Artificiale incorporata";
-		prodottoUno.prezzoProdotto = 1499.99;
 		
 		//Voglio stampare nome del prodotto e descrizione
-		System.out.println("Nome Prodotto: " + prodottoUno.nomeProdotto);
-		System.out.println("Descrizione: " + prodottoUno.descrizioneProdotto);
+		prodottoUno.setNomeProdotto("iPhone15");
+		prodottoUno.setDescrizioneProdotto("ed è di colore Nero Ardesia");
+		System.out.println("Il prodotto si chiama" + " " + prodottoUno.getNomeProdotto() + " " + prodottoUno.getDescrizioneProdotto());
 		
 		//Richiamiamo il metodo void per crere il codice prodotto randomico
-		prodottoUno.createCode();
-		System.out.println("Codice Prodotto: " + prodottoUno.codiceProdotto);
+		prodottoUno.getCreateCode();
+		System.out.println("il codice del prodotto è:" + " " + prodottoUno.getCodiceProdotto());
 		
 		//Stampiamo il prezzo con IVA
-		System.out.println("Il Prezzo Totale è: " + prodottoUno.getPrezzoIva());
+		prodottoUno.setPrezzoProdotto(100);
+		System.out.println("Il prezzo con IVA è:" + " " + prodottoUno.getPrezzoIva());
 		
 		//Stampiamo nome + codice
-		System.out.println("Il nome esteso è: "+ prodottoUno.getNomeCodice());
-		
+		System.out.println(prodottoUno.getNomeCodice());
+
 	}
 }

@@ -5,31 +5,72 @@ import java.util.Random;
 public class Prodotto {
 
 	//Creo gli attributi della classe
-	int codiceProdotto;
+	private int codiceProdotto;
 	
-	String nomeProdotto;
+	private String nomeProdotto;
 	
-	String descrizioneProdotto;
+	private String descrizioneProdotto;
 	
-	double prezzoProdotto;
+	private double prezzoProdotto;
 	
-	double ivaProdotto = 1.22;
+	private static double ivaProdotto = 1.22;
 	
+
+	//GETTER NOME	
+	public String getNomeProdotto() {
+		return nomeProdotto;
+	}
+
+
+	//SETTER NOME	
+	public void setNomeProdotto(String nomeProdotto) {
+		this.nomeProdotto = nomeProdotto;
+	}
+
+
+	//GETTER DESCRIZIONE	
+	public String getDescrizioneProdotto() {
+		return descrizioneProdotto;
+	}
+
+
+	//SETTER DESCRIZIONE	
+	public void setDescrizioneProdotto(String descrizioneProdotto) {
+		this.descrizioneProdotto = descrizioneProdotto;
+	}
+
+
+	//GETTER PREZZO	
+	public double getPrezzoProdotto() {
+		return prezzoProdotto;
+	}
+
+
+	//SETTER DESCRIZIONE
+	public void setPrezzoProdotto(double prezzoProdotto) {
+		this.prezzoProdotto = prezzoProdotto;
+	}
+
 	
-	//Creo i metodi della classe
+	//GETTER CODICE	
+	public int getCodiceProdotto() {
+		return codiceProdotto;
+	}
+
+
 	//METODO PER CREARE CODICE RANDOMICO
-	void createCode(){
+	public void getCreateCode(){
 		Random numeroRandomico = new Random(); //importo l'utilities per il random
 		codiceProdotto = numeroRandomico.nextInt(10000); //assegno all'attributo il num random
 	}
 	
 	//METODO CALCOLO PREZZO + IVA
-	double getPrezzoIva() {
+	public double getPrezzoIva() {
 		return prezzoProdotto * ivaProdotto; //faccio ritornare al double il calcolo
 	}
 	
 	//CREO LA STRINGA NOME+CODICE
-	String getNomeCodice() {
+	public String getNomeCodice() {
 		return nomeProdotto + "-" + codiceProdotto; //creo concatenazione
 	}
 	
